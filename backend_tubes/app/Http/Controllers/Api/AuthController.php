@@ -12,7 +12,7 @@ use Illuminate\Auth\Events\Registered;
 
 class AuthController extends Controller
 {
-    //register
+
     public function register(Request $request)
     {
         $registrationData = $request->all();

@@ -63,12 +63,12 @@ class ProdukController extends Controller
                 'message' => 'Retrieve produk Success',
                 'data' => $produk
             ], 200);
-        }
+        }else
 
         return response([
             'message' => 'Produk Not Found',
             'data' => null
-        ], 404);
+        ], 200);
     }
 
     public function update(Request $request, $id)

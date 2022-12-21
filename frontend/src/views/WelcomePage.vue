@@ -65,6 +65,11 @@
                             </p>
                             <br />
                             <p class="text-grey">
+                                Kami menyediakan reservasi bagi anda yang ingin datang tanpa mengantri. Terdapat 4 sesi.
+                                Sesi 1 jam 09.00, sesi 2 jam 13.00, sesi 3 jam 16.00, sesi 4 jam 19.00.
+                            </p>
+                            <br />
+                            <p class="text-grey">
                                 Kami juga menyediakan berbagai macam produk kecantikan
                                 seperti kosmetik, perawatan rambut, dan perawatan kulit yang dapat dibeli
                                 oleh anda. Tentunya kami memiliki tim ahli yang terlatih dan

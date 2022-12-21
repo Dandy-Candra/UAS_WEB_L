@@ -40,8 +40,8 @@
 
 
 
-          <v-list-item class="text-yellow" prepend-icon="mdi-logout" title="Logout" value="logout" @click="logout"
-            role="link"></v-list-item>
+          <v-list-item class="text-yellow" prepend-icon="mdi-logout" title="Logout" value="logout"
+            @click="state.logoutDialog = true" role="link"></v-list-item>
 
 
 
@@ -106,6 +106,19 @@
       </v-card-actions>
     </v-card>
   </v-dialog>
+
+  <v-dialog v-model="state.logoutDialog" persistent max-width="400px">
+    <v-card>
+      <v-card-title style="background: transparent">
+        <span class="headline text-white"><strong>Are you sure to logout ?</strong></span>
+      </v-card-title>
+      <v-card-actions>
+        <v-spacer></v-spacer>
+        <v-btn color="red darken-1" text @click="logoutConfirm">YES</v-btn>
+        <v-btn color="blue darken-1" text @click="state.logoutDialog = false">No</v-btn>
+      </v-card-actions>
+    </v-card>
+  </v-dialog>
 </template>
 <script>
 import { onMounted, reactive } from "vue";
@@ -115,6 +128,7 @@ export default {
 
   setup() {
     const state = reactive({
+      logoutDialog: false,
       validProfile: true,
       drawer: true,
       timeout: 1000,
@@ -257,6 +271,11 @@ export default {
         });
     };
 
+    const logoutConfirm = () => {
+      state.logoutDialog = false;
+      logout();
+    };
+
     return {
       state,
       showProfile,
@@ -268,6 +287,7 @@ export default {
       user,
       getUser,
       logout,
+      logoutConfirm,
     };
   },
 

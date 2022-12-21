@@ -97,7 +97,7 @@
             <v-text-field v-model="state.formTodo.stok" label="Stok" persistent-hint variant="underlined"
               color="#FBDF7E" required :rules="stokRules" type="number"></v-text-field>
             <v-select v-model="state.formTodo.jenis" label="Jenis" persistent-hint variant="underlined" color="#FBDF7E"
-              required :items="['Shampoo', 'Masker', 'Skincare']" :rules="jenisRules"></v-select>
+              required :items="['Haircare', 'Skincare']" :rules="jenisRules"></v-select>
             <v-text-field v-model="state.formTodo.harga" label="Harga" persistent-hint variant="underlined"
               color="#FBDF7E" required :rules="hargaRules" type="number"></v-text-field>
             <v-file-input @change="onFileChange" v-model="state.formTodo.gambar" label="Upload Image" accept="image/*"
